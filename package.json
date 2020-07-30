@@ -1,0 +1,35 @@
+{
+  "name": "hd-wallets",
+  "version": "0.0.1",
+  "description": "wallet manager",
+  "main": "index.js",
+  "repository": "git@github.com:CamposBruno/wallets.git",
+  "author": "CamposBruno <bhncampos@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test" : "jest"
+  },
+  "dependencies": {
+    "bip32": "^2.0.5",
+    "bip39": "^3.0.2",
+    "bitcoinjs-lib": "^5.1.10",
+    "dotenv": "^8.2.0",
+    "ethereumjs-wallet": "^1.0.0",
+    "typescript": "^3.9.7"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.7",
+    "@typescript-eslint/eslint-plugin": "^3.7.1",
+    "@typescript-eslint/parser": "^3.7.1",
+    "eslint": "^7.5.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^26.1.0",
+    "nodemon": "^2.0.4",
+    "sucrase": "^3.15.0",
+    "ts-jest": "^26.1.4"
+  }
+}

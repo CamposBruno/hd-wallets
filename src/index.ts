@@ -1,2 +1,2 @@
-export { BitcoinWallet } from './Wallets/BitcoinWallet'
-export { EthereumWallet } from './Wallets/EthereumWallet'
+export { BitcoinWallet, HDWBitcoinWallet } from './Wallets/BitcoinWallet'
+export { EthereumWallet, HDEthereumWallet } from './Wallets/EthereumWallet'

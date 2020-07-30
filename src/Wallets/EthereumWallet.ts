@@ -15,9 +15,11 @@ export class EthereumWallet {
     	this._account = account
     }
 
-    public getWallet (idx: number): Wallet {
+    public getWallet (idx: number): HDEthereumWallet {
     	return this._ethereumHDKey.derivePath(
     		Bip44.path(Cryptos.Ethereum, this._account, 0, idx)
     	).getWallet()
     }
 }
+
+export class HDEthereumWallet extends Wallet {}

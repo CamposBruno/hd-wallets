@@ -17,8 +17,8 @@ export class BitcoinWallet {
     	this._account = account
     }
 
-    public getWallet (idx: number): Wallet {
-    	return new Wallet(
+    public getWallet (idx: number): HDWBitcoinWallet {
+    	return new HDWBitcoinWallet(
     		process.env.BITCOIN_NETWORK || 'testnet',
     		this._bip32Key.derivePath(
     			Bip44.path(Cryptos.Ethereum, this._account, 0, idx)
@@ -27,7 +27,7 @@ export class BitcoinWallet {
     }
 }
 
-export class Wallet {
+export class HDWBitcoinWallet {
     private _network: bitcoin.networks.Network;
     private _bip32: BIP32Interface;
 

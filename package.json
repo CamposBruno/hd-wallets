@@ -1,6 +1,6 @@
 {
   "name": "hd-wallets",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "wallet manager",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -8,7 +8,7 @@
   "author": "CamposBruno <bhncampos@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test" : "jest",
+    "test": "jest",
     "build": "tsc"
   },
   "dependencies": {

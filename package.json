@@ -1,6 +1,6 @@
 {
   "name": "hd-wallets",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "wallet manager",
   "main": "build/index.js",
   "types": "build/index.d.ts",

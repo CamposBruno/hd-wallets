@@ -7,19 +7,21 @@ import { Cryptos } from '../Common/Enums'
 import * as bitcoin from 'bitcoinjs-lib'
 
 export class BitcoinWallet {
+    private readonly _network: string
     private readonly _bip32Key: BIP32Interface
     private readonly _account: number
 
-    constructor (mnemonic: string, account: number) {
+    constructor (network: string, mnemonic: string, account: number) {
     	this._bip32Key = Bip32.generateFromSeed(
     		Bip39.getSeed(mnemonic)
     	)
     	this._account = account
+    	this._network = network
     }
 
     public getWallet (idx: number): HDWBitcoinWallet {
     	return new HDWBitcoinWallet(
-    		process.env.BITCOIN_NETWORK || 'testnet',
+    		this._network,
     		this._bip32Key.derivePath(
     			Bip44.path(Cryptos.Ethereum, this._account, 0, idx)
     		)
@@ -32,7 +34,7 @@ export class HDWBitcoinWallet {
     private _bip32: BIP32Interface;
 
     private getNetwork (network: string): bitcoin.networks.Network {
-    	return network === 'bitcoin' ? bitcoin.networks.bitcoin : bitcoin.networks.testnet
+    	return network === 'mainnet' ? bitcoin.networks.bitcoin : bitcoin.networks.testnet
     }
 
     constructor (network: string, bip32: BIP32Interface) {

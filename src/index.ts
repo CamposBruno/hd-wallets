@@ -1,3 +1,3 @@
-import { BitcoinWallet, HDWBitcoinWallet } from './Wallets/BitcoinWallet'
-import { EthereumWallet, HDEthereumWallet } from './Wallets/EthereumWallet'
-export { BitcoinWallet, HDWBitcoinWallet, EthereumWallet, HDEthereumWallet }
+export { BitcoinWallet, HDWBitcoinWallet } from './Wallets/BitcoinWallet'
+export { EthereumWallet, HDEthereumWallet } from './Wallets/EthereumWallet'
+export { RippleWallet, HDXRPWallet } from './Wallets/RippleWallet'

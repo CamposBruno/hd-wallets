@@ -17,6 +17,7 @@
     "bitcoinjs-lib": "^5.1.10",
     "dotenv": "^8.2.0",
     "ethereumjs-wallet": "^1.0.0",
+    "ripple-bip32": "^0.0.3",
     "typescript": "^3.9.7"
   },
   "devDependencies": {
